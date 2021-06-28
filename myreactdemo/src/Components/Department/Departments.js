@@ -31,13 +31,13 @@ class Departments extends React.Component {
   }
 
   deleteDepartment=(departmentID)=> {
-    debugger;
+    
     if (!window.confirm("Are you sure to delete this department?")) {
       return;
     } else {
       axios.delete(Global.APIBaseURL + "Departments/" + departmentID)
       .then((result) => {
-        debugger;
+        
         if(result.data.status===200)
         {
           alert(result.data.message);
@@ -50,7 +50,7 @@ class Departments extends React.Component {
         console.log(result);
       },
       error=>{
-        debugger;
+        
         console.error(error);
         window.location.reload();
       }

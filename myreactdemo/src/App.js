@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Home from "./Components/Home";
+import Home from "./Components/Screen/Home";
 import Departments from "./Components/Department/Departments";
 import Employees from "./Components/Employee/Employees";
 import CreateEmployee from "./Components/Employee/CreateEmployee";
 import EditEmployee from "./Components/Employee/EditEmployee";
-import Layout from "./Components/Layout";
+import Layout from "./Components/Screen/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateDepartment from "./Components/Department/CreateDepartment";
 import EditDepartment from "./Components/Department/EditDepartment";

@@ -29,7 +29,6 @@ class EmployeeForm extends Component {
     if (this.props.employeeID !== undefined) {
       axios.get(Global.APIBaseURL + "Employees/" + this.props.employeeID).then(
         (result) => {
-          debugger;
           console.log(result.data.data);
           this.setState({
             employeeID: result.data.data.employeeID,
@@ -59,7 +58,6 @@ class EmployeeForm extends Component {
   };
 
   handleDateChange = (e) => {
-    debugger;
     this.setState({ dob: e});
   };
   

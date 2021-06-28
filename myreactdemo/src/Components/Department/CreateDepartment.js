@@ -13,7 +13,7 @@ class CreateDepartment extends React.Component {
   }
 
   AddDepartment = (e) => {
-    debugger;
+    
     e.preventDefault();
     if(!this.validateSubmit())
     {
@@ -22,7 +22,7 @@ class CreateDepartment extends React.Component {
     }
     else
     {
-      debugger;
+      
       axios
       .post(Global.APIBaseURL + "Departments", {
         departmentName: this.state.departmentName,
@@ -32,7 +32,7 @@ class CreateDepartment extends React.Component {
     }})
       .then(
         (result) => {
-          debugger;
+          
           console.log(result.data);
           if (result.data.status === 201) {
             alert(result.data.message);
@@ -44,7 +44,7 @@ class CreateDepartment extends React.Component {
           }
         },
         (error) => {
-          debugger;
+          
           alert("failed." + error);
           this.props.history.push("/departments");
         }
@@ -53,7 +53,7 @@ class CreateDepartment extends React.Component {
    
   };
 validateSubmit=()=>{
-  debugger;
+  
 
   if(this.state.departmentName==="")
   {

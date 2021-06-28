@@ -30,13 +30,11 @@ await axios.get(Global.APIBaseURL + "Employees").then(
   }
 
   deleteEmployee=(employeeID)=> {
-    debugger;
     if (!window.confirm("Are you sure to delete this employee?")) {
       return;
     } else {
       axios.delete(Global.APIBaseURL + "Employees/" + employeeID)
       .then((result) => {
-        debugger;
         if(result.data.status===200)
         {
           alert(result.data.message);
@@ -49,7 +47,6 @@ await axios.get(Global.APIBaseURL + "Employees").then(
         console.log(result);
       },
       error=>{
-        debugger;
         console.error(error);
         window.location.reload();
       }

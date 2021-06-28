@@ -5,24 +5,17 @@ import Global from "../../Global.js";
 import  EmployeeForm  from "./EmployeeForm";
 
 class CreateEmployee extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   AddEmployee = (newemployee) => {
-    debugger;
     if(!this.validateSubmit(newemployee))
     {
       return false;
     }
     else
     {
-      debugger;
       axios
         .post(Global.APIBaseURL + "Employees",newemployee)
         .then(
           (result) => {
-            debugger;
             console.log(result.data);
             if (result.data.status === 201) {
               alert(result.data.message);
@@ -32,7 +25,6 @@ class CreateEmployee extends React.Component {
             }
           },
           (error) => {
-            debugger;
             alert("failed." + error);
             this.props.history.push("/Employees");
           }
@@ -42,7 +34,6 @@ class CreateEmployee extends React.Component {
   };
   
 validateSubmit=(model)=>{
-  debugger;
 
   if(model.firstName==="")
   {

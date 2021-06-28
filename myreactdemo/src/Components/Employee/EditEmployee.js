@@ -20,7 +20,6 @@ class EditDepartment extends React.Component {
   }
 
   UpdateDepartment = (model) => {
-    debugger;
     if (!this.validateSubmit(model)) {
       alert("please enter department name");
       return false;
@@ -44,7 +43,6 @@ class EditDepartment extends React.Component {
   }
 
   validateSubmit=(model)=>{
-    debugger;
   
     if(model.firstName==="")
     {
